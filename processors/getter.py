@@ -1,7 +1,5 @@
-import sys
-sys.path.append('../')
-from storage import redisclient
-from crawler import crawler
+from QuickProxy.storage import redisclient
+from QuickProxy.crawler import crawler
 from setting import POOL_UPPER_THRESHOLD
 import asyncio
 

@@ -1,14 +1,11 @@
-import sys
-
-sys.path.append('../')
-
 from multiprocessing import Process
 from export.api import app
-from processors.getter import Getter
-from tester.tester import Tester
+from QuickProxy.processors.getter import Getter
+from QuickProxy.tester.tester import Tester
 from setting import TESTER_CYCLE, GETTER_CYCLE, TESTER_ENABLED, GETTER_ENABLED, API_ENABLED, API_HOST, API_PORT, \
     GETTER_FLAG, GETTER_MAX
 import time
+import asyncio
 
 
 class Scheduler:
@@ -25,7 +22,7 @@ class Scheduler:
         while True:
             if getter.client.getavailcount() < GETTER_FLAG and getter.client.getcount() < GETTER_MAX:
                 print('[+] Getter start runing...')
-                getter.run()
+                asyncio.run(getter.run())
                 time.sleep(cycle)
 
     def schedule_api(self):

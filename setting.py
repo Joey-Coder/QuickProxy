@@ -8,7 +8,7 @@ REDIS_KEY = 'proxies'
 POOL_UPPER_THRESHOLD = 10000
 
 VALID_STATUS_CODES = [200, 302]
-TEST_URL = 'http://m.weibo.cn'
+TEST_URL = 'http://www.baidu.com'
 BATCH_TEST_SIZE = 100
 TEST_TIME_OUT = 6
 

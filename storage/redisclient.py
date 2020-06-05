@@ -1,8 +1,5 @@
 import redis
 from random import choice
-import sys
-
-sys.path.append("../../")
 from QuickProxy.setting import REDIS_HOST, REDIS_PASSWD, REDIS_PORT, MIN_SCORE, MAX_SCORE, INITIAL_SCORE, REDIS_KEY
 
 

@@ -1,7 +1,4 @@
-import sys
-
-sys.path.append('../')
-from storage.redisclient import RedisClient
+from QuickProxy.storage.redisclient import RedisClient
 import asyncio
 import aiohttp
 from setting import VALID_STATUS_CODES, TEST_URL, BATCH_TEST_SIZE, TEST_TIME_OUT

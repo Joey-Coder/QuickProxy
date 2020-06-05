@@ -1,7 +1,5 @@
-import sys
-sys.path.append('../')
 from flask import Flask, g
-from storage.redisclient import RedisClient
+from QuickProxy.storage.redisclient import RedisClient
 
 
 __all__ = ['app']
